@@ -3,9 +3,9 @@
   "configurations": [
     {
       "type": "java",
-      "name": "Run Main",
+      "name": "Run StringPractice",
       "request": "launch",
-      "mainClass": "Main",
+      "mainClass": "com.csplusplus.StringPractice",
       "projectName": "${workspaceFolderBasename}"
     }
   ]

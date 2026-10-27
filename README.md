@@ -1,47 +1,88 @@
-# APCSA: ArrayList
+# String Algorithms Practice
 
-## Overview
+## Goal
 
-Overview of the assignment
+Show that you can traverse a string forward and backward, count occurrences (including overlaps), and build a new string from an existing one. All four required tasks use only `length`, `substring`, `equals`, and `+`.
 
-## Getting Started
+## AI Tier
 
-### Option 1: GitHub Codespaces (Recommended)
+**Disclose and retype.** You may use AI for planning or debugging help, but you must:
 
-1. Click the green **Code** button on this repository
-2. Select the **Codespaces** tab
-3. Click **Create codespace on main**
-4. Wait for the environment to build (~2 minutes the first time)
-5. Start coding in `src/main/java/com/csplusplus/Unit7.java`
+1. Fill in the **AI Use Statement** at the top of `StringPractice.java`.
+2. **Retype** any AI-generated code yourself (do not paste it in).
+3. Write a plain-English **PLAN** comment before coding each required method.
 
-> **Note:** If the Java extension shows errors on first load, press `Cmd+Shift+P` (Mac) or `Ctrl+Shift+P` (Windows) and run **"Developer: Reload Window"**. This is a one-time setup step.
+## Tasks
 
-### Option 2: Local Development
+| # | Method | What it does | Pattern |
+|---|--------|--------------|---------|
+| 1 | `printChars(String s)` | Prints each character on its own line | Traverse forward |
+| 2 | `printReverse(String s)` | Prints each character from last to first | Traverse backward |
+| 3 | `int countOccurrences(String text, String target)` | Counts matches, including overlaps | Count with a sliding window |
+| 4 | `String insertWord(String sentence, String word)` | Puts the word after every word of the sentence | Rebuild a new string |
+| Stretch A | `boolean isPalindrome(String s)` | Same forward and backward | Reverse plus equals |
+| Stretch B | `String removeAll(String text, String letter)` | Removes every copy of a letter | Rebuild skipping matches |
 
-1. Clone the repository using GitHub Desktop
-2. Open the project in VS Code
+**Example for Task 4:** `insertWord("how is your morning going", "like")` returns  
+`"how like is like your like morning like going like"`
 
-## Running Tests
+Assume single spaces between words and no space at the start or end of the sentence.
 
-### In VS Code / Codespaces
+## How to Run
 
-Click the green play button next to any test method in `Unit7Test.java`, or open the **Testing** sidebar (beaker icon).
+Work in `src/main/java/com/csplusplus/StringPractice.java`. Do **not** edit `StringPracticeTester.java`.
 
-## Scoring
+### Codespaces / VS Code (recommended)
 
-Add in how the scoring works
+1. Open the Testing sidebar (beaker icon), or click the green play button next to a test in `StringPracticeTester.java`.
+2. Or from the terminal:
 
-## Important Constraint
+```bash
+mvn test
+```
 
-When submitting the methods that are provided should be the ones that are functional.
+You should see each of the 15 checks pass or fail, with expected and actual values when a test fails.
 
-## Common Mistakes
+You can also run `StringPractice` alone and call your methods from `main` while you are building them.
 
-If any that you would like to add
+### BlueJ
 
-## Submission
+1. Open `src/main/java/com/csplusplus/StringPractice.java`.
+2. Complete your methods there.
+3. Prefer Codespaces/`mvn test` for the full self-check, since the tester uses JUnit.
 
-Talk about how to submit
+## Rules
+
+- You may use **only**: `length`, `substring`, `equals`, and string concatenation (`+`).
+- Do **not** use: `split`, `replace`, `charAt`, `StringBuilder`, or `toCharArray`.
+- Write a plain-English **PLAN** comment before coding each required method.
+- Retype any AI-generated code yourself. Fill in the AI Use Statement at the top of the file.
+- Commit after each task with a short message (Professional Practice).
+
+## Reflection (no AI)
+
+Answer in your own words below (or in a short comment at the bottom of `StringPractice.java`).
+
+1. Why does `countOccurrences` stop at `text.length() - target.length()`?
+
+   Your answer:
+
+2. Why can’t `insertWord` change the original sentence? Use the words **immutable** and **reassign**.
+
+   Your answer:
+
+3. Which task was hardest, and what did you do when you got stuck?
+
+   Your answer:
+
+## Done Checklist
+
+- [ ] All four required tasks pass in `StringPracticeTester`
+- [ ] PLAN comments written for each required method
+- [ ] AI Use Statement filled in
+- [ ] Reflection questions answered
+- [ ] Committed after each task and pushed
 
 ## Credit
-This repo template was modified from [CS-Plus-Plus] (https://github.com/cs-plus-plus)
+
+Repository template adapted from [CS-Plus-Plus](https://github.com/cs-plus-plus).
