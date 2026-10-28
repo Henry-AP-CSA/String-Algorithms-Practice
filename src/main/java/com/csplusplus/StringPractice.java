@@ -72,4 +72,19 @@ public class StringPractice {
     public static void main(String[] args) {
         // Try your methods here. Run this file to see your output.
     }
+    
+    /* REFLECTION: Answer in your own words below.
+
+        1. Why does countOccurrences stop at text.length() - target.length()?
+
+            Your answer:
+
+        2. Why can’t insertWord change the original sentence? Use the words immutable and reassign.
+
+            Your answer:
+
+        3. Which task was hardest, and what did you do when you got stuck?
+
+            Your answer:
+    */
 }
